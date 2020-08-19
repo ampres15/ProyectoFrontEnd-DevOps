@@ -7,7 +7,17 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "version": "echo $npm_package_version",
+    "name": "echo $npm_package_name",
+    "dockerRegistry": "echo $npm_package_publishConfig_dockerRegistry",
+    "test:unit": "ng test --no-watch --browsers=ChromeHeadless --no-progress",
+    "cover": "ng test --watch=false --code-coverage=true",
+    "build:ci": "ng build --prod --aot --build-optimizer --progress=false --configuration=production --base-href ./"
+  },
+  "publishConfig": {
+    "registry": "https://cdnxpro.pronaca.com/repository/npm-internal/",
+    "dockerRegistry": "cddnpro.pronaca.com"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +48,7 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~3.3.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "karma-junit-reporter": "^2.0.1",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
