@@ -6,8 +6,9 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 export class ApiTestService {
-  
-  apiURL: string = 'http://localhost:/api';
+
+  //apiURL: string = 'http://localhost:/api';
+  apiURL: string = 'https://cdbgsbdes.pronaca.com/api';
 
   constructor(private httpClient: HttpClient) { }
 

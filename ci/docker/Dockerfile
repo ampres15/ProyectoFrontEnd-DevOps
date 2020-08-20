@@ -7,7 +7,7 @@ COPY package*.json /app/
 COPY ci/docker/nginx.conf /app/
 
 #ARG NPM_TOKEN
-COPY .npmrc .npmrc
+#COPY .npmrc .npmrc
 
 RUN npm install -f --no-package-lock --verbose -d --quiet
 RUN npm install -g @angular/cli
